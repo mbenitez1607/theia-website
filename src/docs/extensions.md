@@ -14,7 +14,7 @@ The following diagram shows the high level architecture for all three options. V
 
 <img src="/extensiontypes.png" alt="Theia Logo Blue" style="max-width: 525px">
 
-If you would like more guidance on which mechanism to use, please also refer to [this detailed comparions between VS Code extensions and Theia extensions](https://eclipsesource.com/blogs/2021/03/24/vs-code-extensions-vs-theia-extensions/).
+If you would like more guidance on which mechanism to use, please also refer to [this detailed comparison between VS Code extensions and Theia extensions](https://eclipsesource.com/blogs/2021/03/24/vs-code-extensions-vs-theia-extensions/).
 
 ##Theia extensions
 A Theia extension is a module that resides inside a Theia application and communicates with other modules (Theia extensions) via dependency injection. The Theia project itself is composed of Theia extensions too. To create a Theia application, you can select a number of Theia extensions provided by the Theia project, add your own custom Theia extensions and then compile and run the result. Your custom Theia extension will have the same level of access as the core ones. This modularity allows you to extend, adapt or remove almost anything in Theia according to your requirements. Also specific use cases, such as complex views are easier to develop with Theia extensions compared to VS Code extensions.
