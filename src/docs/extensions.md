@@ -2,7 +2,7 @@
 title: Extensions
 ---
 
-# Extensions and plugins
+# Extensions and Plugins
 
 Eclipse Theia is designed in a very modular and extensible way. It supports three ways of being extended/adapted to your specific requirements. These are complementary and are targeted at different use cases. You can pick the best option and even mix them within the same project.
 In the following, we will give you a quick overview of the available extension mechanisms and provide more details in the sections below.
