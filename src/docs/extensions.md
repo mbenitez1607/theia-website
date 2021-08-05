@@ -16,15 +16,15 @@ The following diagram shows the high level architecture for all three options. V
 
 If you would like more guidance on which mechanism to use, please also refer to [this detailed comparison between VS Code extensions and Theia extensions](https://eclipsesource.com/blogs/2021/03/24/vs-code-extensions-vs-theia-extensions/).
 
-##VS Code extensions
+##VS Code Extensions
 VS Code extensions are the popular mechanism to extend VS Code with new language support and other features. VS Code extensions are simple to develop and they have access to a defined and restricted API. VS Code extensions can be pre-installed (built in), but also installed at runtime (e.g. by the user). Eclipse Theia provides the same extension API as VS Code, so extensions are compatible. Therefore, to develop your own extension, please refer to the [VS Code extension documentation](https://code.visualstudio.com/api). Please also refer to this coverage report, highlighting which API of VS Code is covered by Theia.
 Please also note that you can use existing VS Code extensions in Theia, too. A good source for installing or downloading extensions is the [Open VSX registry](https://open-vsx.org/).
 
-##Theia extensions
+##Theia Extensions
 A Theia extension is a module that resides inside a Theia application and directly ommunicates with other modules (Theia extensions). The Theia project itself is composed of Theia extensions too. To create a Theia application, you can select a number of Theia extensions provided by the Theia project (core extensions), add your own custom Theia extensions and then compile and run the result. Your custom Theia extension will have access to the same API as the core extensions. This modularity allows you to extend, adapt or remove almost anything in Theia according to your requirements. Also specific use cases, such as complex views are easier to develop with Theia extensions compared to VS Code extensions.
 Technically, an extension is an npm package that exposes any number of DI modules (`ContainerModule`) that contribute to the creation of the DI container.
 Extensions are consumed by declaring them as a `dependency` in the `package.json` of the application/extension, and are installed at compile time.
 See [this section](https://theia-ide.org/docs/authoring_extensions/) for more detail on how to author a Theia extension.
 
-##Theia plugins
+##Theia Plugins
 Theia plugins are a special type of VS Code extensions that only run in Eclipse Theia. They share the architecture and other attributes of VS Code extensions, but they also have access to additional API that is only available in Theia, not in VS Code. Most noticeable, Theia plugins can also directly contribute to the frontend while VS Code extensions are restricted to the backend. As a consequence Theia plugins can directly manipulate the UI without going through a webview abstraction, easing the development process. Please see [this section](https://theia-ide.org/docs/authoring_plugins/) for more details about Theia plugins.
