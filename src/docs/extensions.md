@@ -28,5 +28,6 @@ Technically, an extension is an npm package that exposes any number of DI module
 Extensions are consumed by declaring them as a `dependency` in the `package.json` of the application/extension, and are installed at compile time.
 See [this section](https://theia-ide.org/docs/authoring_extensions/) for more detail on how to author a Theia extension.
 
-##Theia Plugins
+## Theia Plugins
+
 Theia plugins are a special type of VS Code extensions that only run in Eclipse Theia. They share the architecture and other attributes of VS Code extensions, but they also have access to additional API that is only available in Theia, not in VS Code. Most noticeable, Theia plugins can also directly contribute to the frontend while VS Code extensions are restricted to the backend. As a consequence Theia plugins can directly manipulate the UI without going through a webview abstraction, easing the development process. Please see [this section](https://theia-ide.org/docs/authoring_plugins/) for more details about Theia plugins.
