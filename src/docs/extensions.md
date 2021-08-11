@@ -10,6 +10,7 @@ In the following, we will give you a quick overview of the available extension m
 - **VS Code extensions**: Simple to write, installable at runtime, compatible with VS Code, limited to the VS Code extension API, some use cases not possible due to API restrictions => Used for adding features to existing tools. Note that you can also use existing VS Code extensions within Theia, too.
 - **Theia extensions**: Install at compile time, full access to internals of Theia via dependency injection, almost no limitations in terms of accessible API => used to build custom products and for features not covered by the VS Code extension API. Note that the Theia project (including the core) is fully built using Theia extensions in a modular way.
 - **Theia plugins**: Like VS Code extensions, additional access to some Theia specific APIs and the Frontend (frontend plugins), Theia specific parts are not compatible with VS Code.
+
 The following diagram shows the high level architecture for all three options. VS Code extensions and Theia plugins run in a dedicated process, can be installed at runtime and work against a defined API. Theia extensions are added during compile time and become a core part of your Theia application. They can access the full API of Theia.
 
 <img src="/extensiontypes.png" alt="Theia Logo Blue" style="max-width: 525px">
